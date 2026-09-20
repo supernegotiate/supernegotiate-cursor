@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SuperNegotiate">
-  <rect width="64" height="64" rx="14" fill="#0F766E"/>
-  <path d="M18 40V24l14-8 14 8v16l-14 8-14-8z" fill="none" stroke="#ECFDF5" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M22 38l10-6 10 6" fill="none" stroke="#99F6E4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M32 18v14" fill="none" stroke="#99F6E4" stroke-width="2.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SuperNegotiate">
+  <defs>
+    <linearGradient id="g" x1="20" y1="8" x2="108" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0B1220"/>
+  <path fill="url(#g)" d="M72.5 14L34 70.2c-1.6 2.3.1 5.4 2.9 5.4h27.2l-8.8 38.1c-.8 3.5 3.5 5.8 5.9 3.1L99.8 58.5c2-2.3.3-5.9-2.8-5.9H69.2L78.4 17c.9-3.4-3.3-5.8-5.9-3z"/>
 </svg>
