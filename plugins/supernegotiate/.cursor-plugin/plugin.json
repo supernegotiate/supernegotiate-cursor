@@ -1,0 +1,50 @@
+{
+  "name": "supernegotiate",
+  "displayName": "SuperNegotiate",
+  "version": "1.2.0",
+  "description": "Category-manager for SuperNegotiate reverse auctions. Install from the marketplace, paste an snk_ API key, then create an event and set-and-forget \u2014 the agent monitors, reminds, negotiates within your rules, and escalates award.",
+  "author": {
+    "name": "SuperNegotiate",
+    "email": "hi@supernegotiate.com"
+  },
+  "homepage": "https://supernegotiate.com",
+  "repository": "https://github.com/supernegotiate/supernegotiate-cursor",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "mcp",
+    "procurement",
+    "sourcing",
+    "auction",
+    "negotiation",
+    "rfq",
+    "bids",
+    "category-manager"
+  ],
+  "category": "integrations",
+  "tags": [
+    "mcp",
+    "procurement",
+    "supernegotiate"
+  ],
+  "variables": {
+    "type": "object",
+    "properties": {
+      "SUPERNEGOTIATE_API_KEY": {
+        "type": "string",
+        "title": "API key",
+        "description": "Personal SuperNegotiate API key (starts with snk_). Create one while signed in: POST https://api.supernegotiate.com/api/auth/api-keys. Forwarded as Authorization: Bearer. Required."
+      },
+      "SUPERNEGOTIATE_MCP_URL": {
+        "type": "string",
+        "title": "MCP server URL (optional)",
+        "description": "Hosted Streamable HTTP endpoint. Leave the default unless you self-host MCP.",
+        "default": "https://api.supernegotiate.com/mcp"
+      }
+    },
+    "required": [
+      "SUPERNEGOTIATE_API_KEY"
+    ]
+  },
+  "mcpServers": "./mcp.json"
+}
