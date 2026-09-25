@@ -7,8 +7,11 @@ SuperNegotiate installs in Cursor and Grok Bot **like Bird**: marketplace plugin
 | Hosted MCP (production) | `https://api.supernegotiate.com/mcp` |
 | MCP server source | [`mcp/`](../mcp/) |
 | Cursor / Grok plugin | [`plugins/supernegotiate/`](../plugins/supernegotiate/) |
+| Cursor manifest | [`plugins/supernegotiate/.cursor-plugin/plugin.json`](../plugins/supernegotiate/.cursor-plugin/plugin.json) |
+| Grok manifest | [`plugins/supernegotiate/.grok-plugin/plugin.json`](../plugins/supernegotiate/.grok-plugin/plugin.json) |
 | Marketplace publish checklist | [`docs/marketplace-publish.md`](marketplace-publish.md) |
-| Repo marketplace index | [`.cursor-plugin/marketplace.json`](../.cursor-plugin/marketplace.json) |
+| Cursor marketplace index | [`.cursor-plugin/marketplace.json`](../.cursor-plugin/marketplace.json) |
+| Grok marketplace index | [`.grok-plugin/marketplace.json`](../.grok-plugin/marketplace.json) |
 
 ## 1. Marketplace install (what end users do)
 
@@ -40,7 +43,7 @@ The plugin talks to a **public Streamable HTTP** server. End users never run `np
 - Express mounts MCP **before** body parsers (`server/src/mcpHttpMount.ts`).
 - In-process: Node loads `server/mcp-dist` (built by `server/scripts/build-mcp.cjs`) and the MCP client calls loopback `http://127.0.0.1:$PORT` (same app).
 - Production Railway (`api.supernegotiate.com`, service root `/server`): `server/railway.json` build is `npm install && node scripts/build-mcp.cjs && npx tsc`, start remains `node dist/server.js`. The `/server` image does not contain repo-root `mcp/`; sources are vendored at `server/mcp/` (sync with `node server/scripts/sync-embedded-mcp.cjs`).
-- **Redeploy the API service after merge.** Until Railway rolls this build, `/mcp` 404s.
+- Hosted `GET https://api.supernegotiate.com/mcp` is live (`status: ok`, `name: supernegotiate-mcp`). The response `apiUrl` is the in-process loopback (`http://127.0.0.1:5000`), not a URL buyers configure.
 - Sidecar: set `MCP_UPSTREAM=https://<mcp-service>` on the API so `/mcp` reverse-proxies that process.
 - Opt out: `ENABLE_MCP_HTTP=0`.
 

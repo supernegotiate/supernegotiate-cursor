@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "supernegotiate",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Category-manager for SuperNegotiate reverse auctions. Marketplace install, paste an snk_ API key, create an event, set-and-forget.",
   "author": {
     "name": "SuperNegotiate",

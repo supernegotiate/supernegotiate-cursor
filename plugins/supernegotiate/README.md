@@ -4,7 +4,7 @@ Install from the Cursor marketplace like Bird: **plugin → hosted MCP + skills*
 
 ## Install (Bird-parity)
 
-1. Cursor: **Plugins → SuperNegotiate** (or submit/install from [cursor.com/marketplace](https://cursor.com/marketplace)). Grok Bot: **Settings → Plugins**.
+1. Cursor: **Plugins → SuperNegotiate** (or submit/install from [cursor.com/marketplace](https://cursor.com/marketplace)). Grok Bot: **Settings → Plugins**. Both clients load this package: `.cursor-plugin/` for Cursor and `.grok-plugin/` for Grok Bot, with the same hosted MCP URL and `snk_` key.
 2. Paste **API key** (`snk_…`). Create one while signed in at [app.supernegotiate.com](https://app.supernegotiate.com): `POST https://api.supernegotiate.com/api/auth/api-keys`.
 3. Leave **MCP server URL** at the default `https://api.supernegotiate.com/mcp` unless you self-host.
 4. Ask the agent to create a sourcing event. It becomes the **category manager** (skill `category-manager`): monitor, remind, negotiate within your rules via Autopilot APIs, escalate award.
