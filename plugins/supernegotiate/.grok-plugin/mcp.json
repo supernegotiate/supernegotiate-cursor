@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "supernegotiate": {
+      "type": "http",
+      "url": "${SUPERNEGOTIATE_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${SUPERNEGOTIATE_API_KEY}"
+      }
+    }
+  }
+}

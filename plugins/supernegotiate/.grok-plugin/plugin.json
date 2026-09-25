@@ -2,10 +2,11 @@
   "name": "supernegotiate",
   "displayName": "SuperNegotiate",
   "version": "1.2.1",
-  "description": "Category-manager for SuperNegotiate reverse auctions. Install from the marketplace, paste an snk_ API key, then create an event and set-and-forget \u2014 the agent monitors, reminds, negotiates within your rules, and escalates award.",
+  "description": "Grok Bot category manager for SuperNegotiate reverse auctions. Paste an snk_ API key, create a sourcing event, and set-and-forget — the agent monitors bids, reminds suppliers, negotiates within your rules, and escalates award. Chat is the category manager; the web app is the cockpit.",
   "author": {
     "name": "SuperNegotiate",
-    "email": "hi@supernegotiate.com"
+    "email": "hi@supernegotiate.com",
+    "url": "https://supernegotiate.com"
   },
   "homepage": "https://supernegotiate.com",
   "repository": "https://github.com/supernegotiate/supernegotiate-cursor",
@@ -19,13 +20,21 @@
     "negotiation",
     "rfq",
     "bids",
-    "category-manager"
+    "category-manager",
+    "grok"
   ],
   "category": "integrations",
   "tags": [
     "mcp",
     "procurement",
-    "supernegotiate"
+    "supernegotiate",
+    "grok"
+  ],
+  "skills": [
+    "./skills/category-manager",
+    "./skills/run-sourcing-event",
+    "./skills/bid-on-event",
+    "./skills/review-and-award"
   ],
   "variables": {
     "type": "object",
@@ -46,5 +55,5 @@
       "SUPERNEGOTIATE_API_KEY"
     ]
   },
-  "mcpServers": "./mcp.json"
+  "mcpServers": "./.grok-plugin/mcp.json"
 }

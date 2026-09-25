@@ -1,0 +1,34 @@
+{
+  "name": "supernegotiate",
+  "description": "SuperNegotiate category manager for Grok Bot and Cursor. Paste an snk_ key, create a sourcing event, and set-and-forget.",
+  "owner": {
+    "name": "SuperNegotiate",
+    "email": "hi@supernegotiate.com"
+  },
+  "plugins": [
+    {
+      "name": "supernegotiate",
+      "description": "Grok Bot category manager for reverse auctions. Paste an snk_ API key, create a sourcing event, and set-and-forget: the agent monitors bids, reminds suppliers, negotiates within your rules, and escalates award. The web app is the cockpit.",
+      "category": "integrations",
+      "source": {
+        "type": "local",
+        "path": "./plugins/supernegotiate"
+      },
+      "homepage": "https://supernegotiate.com",
+      "keywords": [
+        "supernegotiate",
+        "procurement",
+        "sourcing",
+        "reverse auction",
+        "rfq",
+        "category manager",
+        "set-and-forget"
+      ],
+      "domains": [
+        "supernegotiate.com",
+        "app.supernegotiate.com",
+        "api.supernegotiate.com"
+      ]
+    }
+  ]
+}

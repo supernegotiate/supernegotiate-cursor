@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Public Cursor/Grok plugin for SuperNegotiate hosted MCP (proprietary app not included)",
-    "version": "1.2.0"
+    "version": "1.2.1"
   },
   "plugins": [
     {
